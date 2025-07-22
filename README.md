@@ -29,7 +29,7 @@ The system consists of three main agents:
 
 ### Prerequisites
 
-- Python 3.12 or higher
+- Python 3.12 or higher, from [Python.org](https://www.python.org/)
 - UV package manager (recommended) or pip
 - [VS Code](https://code.visualstudio.com/) (if using as a client)
 
