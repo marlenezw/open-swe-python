@@ -50,7 +50,7 @@ pip install -e .
 
 ### Using VS Code as an MCP client
 
-1. Open `.vscode` folder and look for the mcp.json file:
+1. In VS Code open `.vscode` folder and look for the mcp.json file:
 2. Click the play button that should appear and confirm that 1 tool is identified.
 3. Open copilot chat and ask it to create any code you'd like!
 
