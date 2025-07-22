@@ -1,10 +1,10 @@
 # Open-SWE Python
 
-A Python implementation of Open-SWE (Software Engineering) agent with multi-agent workflow for automated coding tasks. This system provides an intelligent software engineering assistant that can understand requirements, plan solutions, and generate code through a collaborative multi-agent approach.
+A Python implementation of [LangChain's Open-SWE](https://github.com/langchain-ai/open-swe) (Open Software Engineering) agent with multi-agent workflow for automated coding tasks. This system provides an intelligent software engineering assistant that can understand requirements, plan solutions, and generate code through a collaborative multi-agent approach. This repo in particular is made to help show you how to use Open-SWE as an MCP server with VS Code.For a model detail step by step walk through check out the [Lets Learn MCP Python](https://github.com/microsoft/lets-learn-mcp-python) repo! 
 
 ## Overview
 
-Open-SWE Python is designed to automate software engineering tasks by leveraging multiple specialized AI agents that work together to deliver complete solutions. The system uses a graph-based workflow where different agents handle specific aspects of the software development process.
+Open-SWE Python is designed to automate software engineering tasks by leveraging multiple specialized AI agents that work together to deliver complete solutions. The system uses a graph-based workflow where different agents handle specific aspects of the software development process. It also uses MCP to work directly with vs code so the agent can be invoked through Github Copilot. 
 
 ## Architecture
 
@@ -56,13 +56,11 @@ Use the CLI script for quick interactions:
 python open-swe-cli.py "Create a Python function to calculate fibonacci numbers"
 ```
 
-### Interactive Mode
+### Using open-swe mcp server with vscode 
 
-For a more interactive experience:
-
-```bash
-python open-swe-copilot.py
-```
+1. Open `.vscode` folder and look for the mcp.json file:
+2. Click the play button that should appear and confirm that 1 tool is identified.
+3. Open copilot chat and ask it to create any code you'd like!
 
 ### Programmatic Usage
 
