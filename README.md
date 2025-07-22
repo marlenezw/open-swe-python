@@ -48,11 +48,19 @@ pip install -e .
 
 ## Usage
 
-### Using open-swe mcp server with vscode 
+### Using VS Code as an MCP client
 
 1. Open `.vscode` folder and look for the mcp.json file:
 2. Click the play button that should appear and confirm that 1 tool is identified.
 3. Open copilot chat and ask it to create any code you'd like!
+
+### Command Line Interface
+
+Use the CLI script for quick interactions:
+
+```bash
+python open-swe-cli.py "Create a Python function to calculate fibonacci numbers"
+```
 
 ### Programmatic Usage
 
@@ -63,14 +71,6 @@ from src.enhanced_graph import run_enhanced_agent
 
 result = run_enhanced_agent("Your coding request here")
 print(f"Status: {result['status']}")
-```
-
-### Command Line Interface
-
-Use the CLI script for quick interactions:
-
-```bash
-python open-swe-cli.py "Create a Python function to calculate fibonacci numbers"
 ```
 
 ## Configuration
