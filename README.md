@@ -48,14 +48,6 @@ pip install -e .
 
 ## Usage
 
-### Command Line Interface
-
-Use the CLI script for quick interactions:
-
-```bash
-python open-swe-cli.py "Create a Python function to calculate fibonacci numbers"
-```
-
 ### Using open-swe mcp server with vscode 
 
 1. Open `.vscode` folder and look for the mcp.json file:
@@ -71,6 +63,14 @@ from src.enhanced_graph import run_enhanced_agent
 
 result = run_enhanced_agent("Your coding request here")
 print(f"Status: {result['status']}")
+```
+
+### Command Line Interface
+
+Use the CLI script for quick interactions:
+
+```bash
+python open-swe-cli.py "Create a Python function to calculate fibonacci numbers"
 ```
 
 ## Configuration
