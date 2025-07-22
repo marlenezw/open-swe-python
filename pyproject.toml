@@ -1,0 +1,38 @@
+[project]
+name = "open-swe-python"
+version = "0.1.0"
+description = "A Python implementation of Open-SWE (Software Engineering) agent with multi-agent workflow for automated coding tasks"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp>=2.10.5",
+    "mcp[cli]>=1.9.4",
+    "pandas>=2.3.1",
+    "rich>=14.0.0",
+    "dataclasses-json>=0.6.0",
+    "langchain-azure-ai>=0.1.4",
+    "langgraph>=0.5.4",
+    "langchain-mcp-adapters>=0.1.0",
+     "python-dotenv>=1.0.0",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+select = ["E", "F", "I", "UP", "A"]
+ignore = ["D203"]
+
+[tool.black]
+line-length = 120
+target-version = ["py311"]
+
+[dependency-groups]
+dev = [
+    "pre-commit",
+    "ruff",
+    "black",
+    "pytest>=8.4.1",
+    "pytest-asyncio>=1.0.0",
+    "coverage",
+    "pytest-cov",
+]
