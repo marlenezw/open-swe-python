@@ -2,6 +2,8 @@
 
 A Python implementation of [LangChain's Open-SWE](https://github.com/langchain-ai/open-swe) (Open Software Engineering) agent with multi-agent workflow for automated coding tasks. This system provides an intelligent software engineering assistant that can understand requirements, plan solutions, and generate code through a collaborative multi-agent approach. This repo in particular is made to help show you how to use Open-SWE as an MCP server with VS Code.For a model detail step by step walk through check out the [Lets Learn MCP Python](https://github.com/microsoft/lets-learn-mcp-python) repo! 
 
+![open-swe](./images/open-swe.png)
+
 ## Overview
 
 Open-SWE Python is designed to automate software engineering tasks by leveraging multiple specialized AI agents that work together to deliver complete solutions. The system uses a graph-based workflow where different agents handle specific aspects of the software development process. It also uses MCP to work directly with vs code so the agent can be invoked through Github Copilot. 
