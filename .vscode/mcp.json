@@ -1,0 +1,13 @@
+{
+	"servers": {
+		"open-swe": {
+			"command": "/home/codespace/.python/current/bin/uv",
+			"args": [
+				"--directory",
+            	"/workspaces/open-swe/python-open-swe",
+            	"run",
+            	"open-swe-copilot.py"]
+		}
+	},
+	"inputs": []
+}
