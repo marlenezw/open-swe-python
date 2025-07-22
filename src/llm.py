@@ -1,18 +1,24 @@
-"""LLM integration for the agent system."""
+"""Azure AI LLM initialization."""
 
-from typing import Optional
-from langchain_azure_ai import ChatAzureAI
-from src.config import config
+import os
+from langchain_azure_ai.chat_models import AzureAIChatCompletionsModel
+from .config import config
 
+# Disable LangSmith tracing and suppress warnings
+os.environ["LANGCHAIN_TRACING_V2"] = "false"
 
-def get_llm(temperature: float = 0.1) -> ChatAzureAI:
-    """Get configured LLM instance."""
-    
-    return ChatAzureAI(
-        azure_endpoint=config.azure_ai_endpoint,
-        api_key=config.azure_ai_api_key,
+def create_azure_llm(model: str="Phi-4", temperature: float = 0.0) -> AzureAIChatCompletionsModel:
+    """Create an Azure AI chat model instance."""
+    return AzureAIChatCompletionsModel(
+        endpoint=config.azure_ai_endpoint,
+        model=model,
         api_version=config.azure_ai_api_version,
-        deployment_name=config.azure_ai_deployment_name,
+        credential=config.azure_ai_api_key,
         temperature=temperature,
-        max_tokens=2000,
     )
+
+
+# Pre-configured LLM instances for different use cases
+manager_llm = create_azure_llm(model = "DeepSeek-R1-0528", temperature=0.0)
+planner_llm = create_azure_llm(model = "DeepSeek-R1-0528", temperature=0.1)
+programmer_llm = create_azure_llm(model = "DeepSeek-R1-0528", temperature=0.0)
