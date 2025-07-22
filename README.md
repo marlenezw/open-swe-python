@@ -31,6 +31,7 @@ The system consists of three main agents:
 
 - Python 3.12 or higher
 - UV package manager (recommended) or pip
+- [VS Code](https://code.visualstudio.com/) (if using as a client)
 
 ### Using UV (Recommended)
 
